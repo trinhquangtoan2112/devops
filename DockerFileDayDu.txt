@@ -19,3 +19,15 @@ COPY --from=build /app/target/shoe-ShoppingCart-0.0.1-SNAPSHOT.jar /run/shoe-Sho
 RUN chown -R shoeshop3:shoeshop3 /run
 EXPOSE 8080
 ENTRYPOINT java -jar /run/shoe-ShoppingCart-0.0.1-SNAPSHOT.jar
+
+
+
+FROM + tendocker images: keo server de su dung moi truong doc lap
+WORKDIR: Chỉ định thư mục làm việc cho container
+COPY: COPY soure code từ bên ngoài server vào container ( 2 tham số thư mục ngoài và thư mục đích)
+RUN: chạy lệnh trong Linux
+ENV khái báo các biến
+Expose: Định nghĩa xem các ứng dung chạy theo port nào
+CMD và ENTRYPOINT : chạy ứng dụng lên
+CMD Xác định lệnh và giá trị sử dung mặc định
+ENTRY POINT Muốn xác định lệnh mặc định, giữ nguyên lệnh mặc định cho phép lệnh chỉ định thêm vào cuối của nó  
